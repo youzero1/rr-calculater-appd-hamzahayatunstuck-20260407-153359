@@ -1,0 +1,185 @@
+.experience {
+  padding: 6rem 2rem;
+  background: var(--bg-card);
+  position: relative;
+}
+
+.experience::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionLabel {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.dot {
+  position: absolute;
+  left: -2.8rem;
+  top: 1.5rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--bg-card);
+  box-shadow: 0 0 0 2px currentColor;
+  z-index: 1;
+}
+
+.line {
+  position: absolute;
+  left: -2.45rem;
+  top: 2.5rem;
+  width: 2px;
+  bottom: -2.5rem;
+  background: var(--border);
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.role {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.company {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.period {
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(108, 99, 255, 0.1);
+  color: var(--primary);
+  padding: 0.25rem 0.8rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.location {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.achievements {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.achievement {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.bullet {
+  display: inline-block;
+  min-width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 2rem;
+  }
+
+  .dot {
+    left: -1.8rem;
+  }
+
+  .line {
+    left: -1.45rem;
+  }
+
+  .meta {
+    align-items: flex-start;
+  }
+
+  .cardTop {
+    flex-direction: column;
+  }
+}
